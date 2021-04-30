@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.bigBlue}>Hey Katie! Can you see this now?</Text>
+      <Text style={styles.bigBlue}>Wow! This fast refresh is REALLY fast!!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   red: {
     color: 'red',
