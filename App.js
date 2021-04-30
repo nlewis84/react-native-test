@@ -6,7 +6,7 @@ export default function App() {
   const [countriesData, setCountriesData] = useState([]);
 
   function fetchCountriesData() {
-    fetch('https://restcountries.eu/rest/v2/region/africa?fields=name')
+    fetch('https://restcountries.eu/rest/v2/region/africa?fields=name;capital')
       .then((response) => response.json())
       .then((json) => setCountriesData(json))
       .catch((error) => console.error(error));
