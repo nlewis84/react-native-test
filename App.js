@@ -1,29 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, FlatList } from 'react-native';
 
 export default function App() {
+  const countriesData = [{"name": "Afghanistan"}, {"name": "Albania"}, {"name": "Algeria"}]
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.bigBlue}>Wow! This fast refresh is REALLY fast!!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <FlatList 
+      data={countriesData}
+      contentContainerStyle={styles.container}
+      keyExtractor={item => item.name}
+      renderItem={({item}) => <Text style={styles.text}>{item.name}</Text>}
+   /> 
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 30
   },
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-    alignItems: 'center',
-    justifyContent: 'center',
+  text: {
+    fontSize: 20,
+    margin: 10
   },
   red: {
     color: 'red',
